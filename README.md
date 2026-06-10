@@ -1,88 +1,49 @@
-# Loan Approval Prediction Using Orange Data Mining
+# Logistic Regression Classification Workflow using Orange
 
-## Overview
+This repository contains a data mining and machine learning workflow built using **Orange Data Mining**. The project demonstrates how to load a dataset, select specific features, train a **Logistic Regression** model, and evaluate its performance.
 
-A Machine Learning-based Loan Approval Prediction System developed using Orange Data Mining. The project utilizes Logistic Regression to classify loan applications based on applicant financial and credit-related information, enabling automated loan eligibility assessment and credit risk analysis.
+## 📌 Workflow Overview
 
-## Features
+The diagram below shows the complete visual programming pipeline designed in Orange:
 
-* Loan approval prediction using Machine Learning
-* Logistic Regression classification model
-* Visual workflow development using Orange Data Mining
-* Data preprocessing and feature selection
-* Model performance evaluation using Test & Score
-* Credit risk assessment and loan eligibility analysis
+<p align="center">
+  <img src="workflow.png" alt="Orange Data Mining Workflow" width="80%">
+</p>
 
-## Tools & Technologies
+### Workflow Components (Widgets)
+1. **File:** Loads the initial dataset into the workspace.
+2. **Select Columns:** Filters and designates which features are independent variables (features) and which one is the target variable (class).
+3. **Logistic Regression:** A supervised learning algorithm used to predict categorical outcomes.
+4. **Test and Score:** Evaluates the model's performance using metrics like AUC, Classification Accuracy (CA), F1-score, Precision, and Recall.
 
-* Orange Data Mining
-* Machine Learning
-* Logistic Regression
-* Data Analysis
-* Classification Modeling
+---
 
-## Workflow
+## ⚙️ Data Flow & Connections
 
-The project follows the following workflow:
+* **File ➔ Select Columns:** Passes the raw loaded data to the feature selection step.
+* **Select Columns ➔ Test and Score:** Sends the processed evaluation data/test set directly for testing.
+* **Select Columns ➔ Logistic Regression:** Passes the training data to feed and train the machine learning model.
+* **Logistic Regression ➔ Test and Score:** Passes the trained "Learner" object to be evaluated.
 
-1. Import dataset using File Widget
-2. Select relevant features and target variables
-3. Train Logistic Regression model
-4. Evaluate model performance using Test & Score
+---
 
-## Workflow Architecture
+## 📊 Expected Results
 
-![Workflow](screenshots/workflow.png)
+When you double-click on the **Test and Score** widget in this workflow, it opens an evaluation panel showing the model's performance metrics:
 
-## Dataset Attributes
+<p align="center">
+  <img src="results.png" alt="Test and Score Results Evaluation" width="70%">
+</p>
 
-The model uses various applicant-related attributes such as:
+| Model | AUC | Classification Accuracy (CA) | F1 Score | Precision | Recall |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Logistic Regression** | *Value* | *Value* | *Value* | *Value* | *Value* |
 
-* Annual Income
-* Loan Amount Requested
-* Credit Score
-* Debt-to-Income Ratio
-* Risk Level
-* Application Status
-* Loan Decision
+---
 
-## Machine Learning Model
+## 🚀 How to Run this Project
 
-### Logistic Regression
-
-Logistic Regression is used as the classification algorithm to predict whether a loan application should be approved or rejected based on applicant financial information and risk indicators.
-
-## Results
-
-The model was evaluated using Orange's Test & Score widget, which provides:
-
-* Accuracy
-* Precision
-* Recall
-* F1 Score
-* AUC Score
-
-The evaluation results demonstrate the effectiveness of Logistic Regression for loan approval prediction and credit risk assessment.
-
-### Workflow Screenshot
-
-![Loan Approval Workflow](screenshot(26).png)
-
-## Applications
-
-* Banking & Financial Services
-* Credit Risk Analysis
-* Loan Underwriting
-* Financial Decision Support Systems
-* Automated Loan Approval Systems
-
-## Future Enhancements
-
-* Compare multiple machine learning algorithms
-* Hyperparameter optimization
-* Integration with real-time loan application systems
-* Advanced risk scoring models
-
-## Conclusion
-
-This project demonstrates how Orange Data Mining can be used to develop an efficient and interpretable Loan Approval Prediction System. The visual workflow simplifies machine learning implementation while providing valuable insights for financial decision-making and risk management.
+1. Download and install [Orange Data Mining](https://orangedatamining.com/).
+2. Clone or download this repository.
+3. Open the `.ows` (Orange Workflow) file included in this repo.
+4. Make sure the **File** widget points to your dataset file, and press refresh if necessary.

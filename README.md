@@ -86,4 +86,4 @@ The evaluation results demonstrate the effectiveness of Logistic Regression for 
 ## Conclusion
 
 This project demonstrates how Orange Data Mining can be used to develop an efficient and interpretable Loan Approval Prediction System. The visual workflow simplifies machine learning implementation while providing valuable insights for financial decision-making and risk management.
-![Loan Approval Workflow](Screenshots/workflow.png)
+
